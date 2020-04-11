@@ -17,7 +17,7 @@ public class Punto_2 extends AppCompatActivity {
     private EditText n4;
     private TextView nf;
     private Button Nuevo;
-  //  private Button Anterior;
+    //  private Button Anterior;
     private Button promedio;
 
     @Override
@@ -41,16 +41,23 @@ public class Punto_2 extends AppCompatActivity {
                 n_2 = Float.parseFloat(n2.getText().toString());
                 n_3 = Float.parseFloat(n3.getText().toString());
                 n_4 = Float.parseFloat(n4.getText().toString());
-                nf.setText(((n_1 + n_2 + n_3 + n_4) / 4) + "");
-                String MNS_n_f = nf.getText().toString();
-                Toast.makeText(Punto_2.this, "La nota final es: " + MNS_n_f, Toast.LENGTH_LONG).show();
+                if ((n_1 > 5) || (n_2 > 5) || (n_3 > 5) || (n_4 > 5)) {
+                    String MSN_Error = nf.getText().toString();
+                    Toast.makeText(Punto_2.this, "Verificar, las notas no pueden ser mayor a '5' " + MSN_Error, Toast.LENGTH_LONG).show();
+                } else {
+
+                    String MNS_n_f = nf.getText().toString();
+                    nf.setText(((n_1 + n_2 + n_3 + n_4) / 4) + "");
+                    Toast.makeText(Punto_2.this, "La nota final es: " + MNS_n_f, Toast.LENGTH_LONG).show();
+                }
             }
+            });
 
-        });
+        Nuevo.setOnClickListener(new View.OnClickListener()
 
-        Nuevo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
+            {
+                @Override
+                public void onClick (View arg0){
                 n1.setText("");
                 n2.setText("");
                 n3.setText("");
@@ -60,12 +67,12 @@ public class Punto_2 extends AppCompatActivity {
             }
 
 
-        });
-    }
+            });
+        }
         public void Anterior (View view){
             Intent anterior = new Intent(this, MainActivity.class);
             startActivity(anterior);
-       }
+        }
     }
 
 
