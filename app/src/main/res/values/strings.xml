@@ -1,0 +1,24 @@
+<resources>
+    <string name="lblTitulo">Nomina</string>
+    <string name="lblHora">HORAS TRABAJADAS</string>
+    <string name="lblValorHora">VALOR HORA TRABAJADA</string>
+    <string name="lblN_1">Nota 1</string>
+    <string name="lblN_2">Nota 2</string>
+    <string name="lblN_3">Nota 3</string>
+    <string name="lblN_4">Nota 4</string>
+    <string name="lblDefinitiva">Definitiva</string>
+    <string name="txtHora">""</string>
+    <string name="txtValorHora">""</string>
+    <string name="txtValorPago">""</string>
+    <string name="btnCalcular">Calcular Pago</string>
+    <string name="btnNuevo">Nuevo</string>
+    <string name="btnSiguiente">Siguiente</string>
+    <string name="lblTiTTulo">Notas Estudiante</string>
+    <string name="txtN_1">""</string>
+    <string name="txtN_2">""</string>
+    <string name="txtN_3">""</string>
+    <string name="txtN_4">""</string>
+    <string name="txtN_F">""</string>
+    <string name="btnAnterior">Anterior</string>
+    <string name="btnPromedio">Calcular Nota</string>
+</resources>
